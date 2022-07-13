@@ -50,7 +50,7 @@ jobs:
       - name: build package
         run: |
           cd ${{ github.workspace }}/recipes/glslang/all
-          conan install . 11.5.0@ -pr clang
+          conan install . 11.5.0@ -pr clang -r=conancenter
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
